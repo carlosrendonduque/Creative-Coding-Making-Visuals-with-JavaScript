@@ -6,8 +6,22 @@
 	<title></title>
 </head>
 <body>
-	<canvas> width="100" height="100"</canvas>
+	<canvas width="600" height="600"></canvas>
 	<script type="text/javascript">
+		let canvas = document.querySelector('Canvas');
+		let context = canvas.getContext('2d');
+		context.fillStyle='blue';
+		//context.fillRect(100, 100, 400, 400);
+
+		context.lineWidth=4;
+		context.beginPath();
+		context.rect(100, 100, 400, 400);
+		context.stroke();
+
+		context.beginPath();
+		context.arc(300, 300, 100, 0, Math.PI*2)
+		context.stroke();
+		
 		let x=5;
 		let sentence="Hi there!!!";
 		function saySomething(param){
@@ -21,10 +35,10 @@
 		console.log(result);
 
 		let multiply = (a, b) => {
-			return a + b;
+			return a * b;
 		}
-		console.log(multiply(5,,7));
-		
+		console.log(multiply(5,7));
+
 	</script>
 </body>
 </html>
